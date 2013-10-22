@@ -1,0 +1,14 @@
+.progress {
+	width:100%;
+	height:30px;
+	position:relative;
+	border-radius:5px;
+	background:gray;
+}
+.track {
+	height:30px;
+	border-radius: inherit;
+	background:green;
+	left:0;
+	position:absolute;
+}

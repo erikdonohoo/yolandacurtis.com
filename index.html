@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="yolanda">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Yolanda Curtis</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+		<div ng-controller="Ctrl">
+			<input type="text" ng-model="myModelObj">
+			<input type="file" ng-file-select="onFileSelect($files)" class="btn btn-primary">
+			<input type="file" ng-file-select="onFileSelect($files)" multiple>
+			<div ng-show="dropSupported" class="drop-box" ng-file-drop="onFileSelect($files);">drop files here</div>
+			<div ng-show="!dropSupported" ng-file-drop-available="dropSupported=true">HTML5 Drop File is not supported!</div>
+		</div>
+
+        <script src="http://code.angularjs.org/1.1.5/angular.js"></script>
+        <script src="js/vendor/angular-file-upload.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
